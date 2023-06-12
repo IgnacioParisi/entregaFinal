@@ -1,0 +1,12 @@
+.item-detail-container {
+    margin-top: 40px;
+}
+
+.item-detail-card {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.product-img {
+    width: 200px !important;
+}

@@ -1,0 +1,8 @@
+.navbar {
+    position: sticky;
+    background-color: rgb(119, 23, 49);
+}
+
+.navbar-toggler.collapsed {
+    border: none;
+}

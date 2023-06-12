@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "category": "vinos",
+        "title": "Finca La Anita Petit Verdot",
+        "description": "De color rojo con tintes violáceos. Aromas frutales y florales de gran intensidad.",
+        "price": 2499,
+        "pictureUrl": "./images/products/product-1.jpeg"
+    },
+    {
+        "id": 2,
+        "category": "vinos",
+        "title": "Los Arboles Malbec",
+        "description": "Aromas a frutillas y ciruelas. De cuerpo medio y taninos suaves. Sabor muy frutado a frutos rojos, fresco y fácil de beber.",
+        "price": 1599,
+        "pictureUrl": "./images/products/product-2.jpeg"
+    },
+    {
+        "id": 3,
+        "category": "vinos",
+        "title": "Argento Estate Collection Malbec",
+        "description": "Presenta aromas a frutos rojos y ciruelas, combinados con notas balsámicas. Un vino con buena estructura, frescura y largo final.",
+        "price": 2360,
+        "pictureUrl": "./images/products/product-3.jpeg"
+    },
+    {
+        "id": 4,
+        "category": "espumantes",
+        "title": "Baron B Extra Brut",
+        "description": "Se destaca por su elegancia aportada por el Chardonnay y la intensidad de fruta otorgada por el Pinot Noir.",
+        "price": 5200,
+        "pictureUrl": "./images/products/product-4.jpeg"
+    },
+    {
+        "id": 5,
+        "category": "espumantes",
+        "title": "Chandon Délice",
+        "description": "Elaborado con las variedades tradicionales de Chandon y de la región de la Champagne francesa: Chardonnay y Pinot Noir.",
+        "price": 2580,
+        "pictureUrl": "./images/products/product-5.jpeg"
+    },
+    {
+        "id": 6,
+        "category": "espumantes",
+        "title": "Cruzat Premier Extra Brut",
+        "description": "Vino espumoso fresco y de sabores persistentes con una equilibrada acidez.",
+        "price": 4500,
+        "pictureUrl": "./images/products/product-6.jpeg"
+
+    }
+]
