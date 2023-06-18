@@ -1,5 +1,4 @@
 import { ItemList } from "../ItemList/ItemList";
-//import { getProducts, getProductsByCategory } from "../../asyncMock";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
@@ -19,11 +18,11 @@ export const ItemListContainer = ({ greeting }) => {
 
         getDocs(collectionRef)
             .then((snapshot) => {
-            setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-        });
+            setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))})
+            .catch((error) => {
+                console.log(error)
+            });
     }, [categoryId]);
-
-    //console.log(products);
 
     if (!products) return <p>Cargando...</p>
 

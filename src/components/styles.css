@@ -100,3 +100,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.links {
+    color: 'white';
+    text-decoration: 'none'
+}

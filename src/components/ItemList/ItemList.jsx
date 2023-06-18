@@ -8,17 +8,19 @@ export const ItemList = ({ products }) => {
         <Container>
             <Row>
                 <CardGroup>
-                    { products.map((product) => {
-                        return (
-                            <>
-                            <Col xs={6} md={6} lg={4}>
-                                <Item 
-                                    key={product.id}
-                                    {...product} />
-                            </Col>
-                            </>
-                        )
-                    })}
+                    { 
+                        products.length > 0 
+                        ? products.map((product) => {
+                            return (
+                                <Col key={product.id} xs={6} md={6} lg={4}>
+                                    <Item 
+                                        key={product.id}
+                                        {...product} />
+                                </Col>
+                            )
+                        })
+                        : <p>Cargando...</p>
+                    }
                 </CardGroup>
             </Row>
         </Container>

@@ -1,8 +1,10 @@
 import { useContext } from "react"
 import { CartContext } from "../../contexts/CartContext"
 import { Link } from "react-router-dom";
-import { Button, Container, Table } from "react-bootstrap";
+import { Button, Container, Modal, Table } from "react-bootstrap";
+import { ModalConfirm } from '../Modal/Modal'
 import deleteIcon from '../../assets/trash-can1.png';
+import '../styles.css'
 
 export const Cart = () => {
     const { cart, totalQuantity, removeItem, cartTotal } = useContext(CartContext);
@@ -12,7 +14,8 @@ export const Cart = () => {
             <Container>
                 <div>
                     <h2>No hay items en el carrito</h2>
-                    <Link to={'/'}>Volver a la página principal</Link>
+                    <Link to={'/'}
+                    >Volver a la página principal</Link>
                 </div>
             </Container>
         )
@@ -24,32 +27,35 @@ export const Cart = () => {
             <Table>
                 <thead>
                     <tr>
-                        <th>Producto</th>
+                        <th colSpan={2}>Producto</th>
                         <th>Precio</th>
                         <th>Cantidad</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {cart.map((product) => {
-                        return (
-                            <tr>
-                                <td key={product.id}>{ product.title }</td>
-                                <td key={product.id}>$ { product.price }</td>
-                                <td key={product.id}>x { product.quantity }</td>
-                                <Button variant="secondary" onClick={() => removeItem(product.id)} >
-                                    <img src={ deleteIcon } alt="delete-icon" />
-                                </Button>
-                            </tr>
-                        )
-                    })}
+                    {
+                        cart.map((product) => {
+                            return (
+                                <tr>
+                                    <td key={product.id}><img src={product.imageUrl} alt="Product" /></td>
+                                    <td key={product.id}>{ product.title }</td>
+                                    <td key={product.id}>$ { product.price }</td>
+                                    <td key={product.id}>x { product.quantity }</td>
+                                    <Button variant="secondary" onClick={() => removeItem(product.id)} >
+                                        <img src={ deleteIcon } alt="delete-icon" />
+                                    </Button>
+                                </tr>
+                            )
+                        })
+                    }
                 </tbody>
                 <tfoot>
-                    <th>Total</th>
+                    <th colSpan={3}>Total</th>
                     <th>$ { cartTotal() }</th>
                 </tfoot>
             </Table>
             <Button>
-                <Link to={'/checkout'} style={{color: 'white', textDecoration: 'none'}}>
+                <Link to={'/checkout'}  style={{color: 'white', textDecoration: 'none'}}>
                     Checkout
                 </Link>
             </Button>
