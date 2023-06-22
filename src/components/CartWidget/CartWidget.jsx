@@ -9,9 +9,9 @@ export const CartWidget = () => {
 
     return (
         <div className="cart-container">
-            <Link to={'/cart'} style={{ display: totalQuantity() > 0 ? 'block' : 'none' }}>
+            <Link to={'/cart'}>
                 <img src={ cartIcon } alt="Cart icon" style={{paddingRight: "4px"}}/>
-                <Badge pill bg="light" text="dark">{ totalQuantity() }</Badge>
+                <Badge pill bg="light" text="dark" style={{ display: totalQuantity() > 0 ? 'inline-block' : 'none' }}>{ totalQuantity() }</Badge>
             </Link>
         </div>
     )

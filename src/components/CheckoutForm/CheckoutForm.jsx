@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 
 export const CheckoutForm = ({ onConfirm }) => {
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
 
     const handleConfirm = (event) => {
         event.preventDefault();

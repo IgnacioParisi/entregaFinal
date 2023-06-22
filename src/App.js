@@ -6,6 +6,7 @@ import { NavBar } from './components/Navbar/NavBar';
 import { Cart } from './components/Cart/Cart';
 import CartContext from './contexts/CartContext';
 import { Checkout } from './components/Checkout/Checkout';
+import { MainSection } from './components/MainSection/MainSection';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <CartContext>
         <NavBar />
         <Routes>
-          <Route exact path='/' element={<ItemListContainer greeting={'El vino indicado para cada ocasión.'} />} />
+          <Route exact path='/' element={<MainSection />} />
           <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />

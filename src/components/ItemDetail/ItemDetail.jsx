@@ -7,14 +7,14 @@ import { useContext, useState } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 
 export const ItemDetail = ({ id, title, description, price, stock, imageUrl }) => {
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(0);
 
     const { addItem } = useContext(CartContext);
 
     const onAdd = (quantity) => {
         setQuantity(quantity);
 
-        const item = {id, title, price};
+        const item = {id, title, price, imageUrl};
 
         addItem(item, quantity);
     }

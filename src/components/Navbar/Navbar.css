@@ -1,6 +1,13 @@
 .navbar {
-    position: sticky;
+    position: sticky !important;
+    top: 0;
+    background-color: transparent;
+    transition: background-color .25s ease-in-out;
+}
+
+.navbar.active {
     background-color: rgb(119, 23, 49);
+    transition: .2;
 }
 
 .navbar-toggler.collapsed {

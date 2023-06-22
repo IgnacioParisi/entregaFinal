@@ -5,9 +5,22 @@ import { Container } from "react-bootstrap";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 export const ItemListContainer = ({ greeting }) => {
-    
     const [products, setProducts] = useState()
     const { categoryId } = useParams()
+
+    useEffect(() => {
+        if(categoryId) {
+            const title = categoryId;
+            const firstLetter = title.charAt(0);
+            const firstLetterCap = firstLetter.toUpperCase();
+            const remainingLetters = title.slice(1);
+            const capitalizedTitle = firstLetterCap + remainingLetters;
+    
+            document.title = `${capitalizedTitle} | Cava Selecta`;
+        } else {
+            document.title = `Cava Selecta`;
+        }
+    }, [categoryId])
 
     useEffect(() => {
         const db = getFirestore();
@@ -29,7 +42,7 @@ export const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <Container>
-                <h1>{ greeting }</h1>
+                <h2>Productos</h2>
             </Container>
             <ItemList products={products} />
         </>

@@ -1,0 +1,48 @@
+.main-section-wrapper {
+    background-image: url('../../assets/wepik-export-20230427211351 1.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* width: 100vw; */
+    position: relative;
+    top: -56px;
+}
+
+.main-section-container {
+    position: relative;
+    top: 25%;
+}
+
+.main-title {
+    font-size: 60px;
+    color: #fff;
+    font-family: 'Montserrat';
+    margin-bottom: 20px;
+}
+
+.main-section-container p {
+    max-width: 50vw;
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 14px;
+}
+
+.main-section-container span {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+.main-cta-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 0;
+    width: 150px;
+    margin-top: 20px;
+    background-color: rgb(119, 23, 49);
+    color: #fff;
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
+}
