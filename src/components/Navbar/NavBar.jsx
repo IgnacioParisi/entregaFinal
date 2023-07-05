@@ -33,19 +33,19 @@ export const NavBar = () => {
 
     return (
         <Navbar expand="md" variant="dark" className={navbar && isHomePage ? 'navbar' : 'navbar active'} sticky="top" >
-            <Container>
+            <Container style={{position: "relative"}}>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Brand style={{ marginLeft: 16 }}>
+                <Navbar.Brand>
                     <Link to={'/'}><img src={ Logo } alt="Cava Selecta logo" /></Link>
                 </Navbar.Brand>
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                <CartWidget className='cart-widget'/>
+                <Navbar.Collapse id="basic-navbar-nav active" className="justify-content-end">
                     <Nav className="mx-auto">
                         <NavLink to={'/'} className='nav-link'>Home</NavLink>
                         <NavLink to={'/category/vinos'} className='nav-link'>Vinos</NavLink>
                         <NavLink to={'/category/espumantes'} className='nav-link'>Espumantes</NavLink>
                     </Nav>
                 </Navbar.Collapse>
-                <CartWidget />
             </Container>
         </Navbar>
     )

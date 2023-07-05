@@ -1,85 +1,12 @@
 * {
     box-sizing: border-box;
     /* margin: 0 auto; */
+    font-family: 'Montserrat';
 }
 
-.header {
-    /* background-color: rgb(119, 23, 49); */
-    background-color: transparent;
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
-
-.main-section {
-    background-image: url('../assets/wepik-export-20230427211351.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-}
-
-.navbar-container {
-    height: 58px;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    /* position: sticky; */
-}
-
-.menu-container {
-    margin: 0 20px 0;
-}
-
-.menu-container ul {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: auto;
-}
-
-.menu-item {
-    margin: 0 10px;
-    padding: 10px;
-    list-style: none;
-}
-
-.menu-item:hover {
-    text-decoration: underline;
-    text-decoration-color: #fff;
-}
-
-.menu-item a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.logo {
-    flex-grow: 2;
-}
-
-.logo h2 {
-    color: rgb(255, 255, 255);
-}
-
-.cart-container {
-    margin: 0 10px 0;
-}
-
-.greeting-container {
-    position: relative;
-    top: 200px;
-}
-
-.greeting {
-    /* font-family: 'Montserrat', sans-serif; */
-    font-weight: bold;
-    /* color: #fff; */
-    margin-left: 10%;
-    font-size: 48px;
-}
+/* body {
+    min-height: 100vh;
+} */
 
 .item-count {
     display: flex;
@@ -104,4 +31,9 @@
 .links {
     color: 'white';
     text-decoration: 'none'
+}
+
+
+@media (max-width: 575px) {
+
 }

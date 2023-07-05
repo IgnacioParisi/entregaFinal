@@ -1,4 +1,4 @@
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { ItemListContainer } from "../ItemListContainer/ItemListContainer";
 import './mainSection.css'
 
@@ -14,8 +14,9 @@ export const MainSection = () => {
                     <p>Descubrí la mejor selección de vinos cuidadosamente elegidos.
                         En nuestra tienda online te ofrecemos una amplia variedad de vinos de las mejores regiones del mundo.
                     </p>
-                    <span>¿Qué esperas para adentrarte en el apasionante mundo del vino?</span>
-                    <br />
+                    <div className="main-subtitle">
+                        <span className="main-span">¿Qué esperas para adentrarte en el apasionante mundo del vino?</span>
+                    </div>
                     <button className="main-cta-btn">Explorar</button>
                 </Container>
             </div>

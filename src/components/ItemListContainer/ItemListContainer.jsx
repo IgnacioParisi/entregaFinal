@@ -3,9 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { CardSkeleton } from "../CardSkeleton/CardSkeleton";
+import './ItemListContainer.css'
 
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer = () => {
     const [products, setProducts] = useState()
+    const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
 
     useEffect(() => {
@@ -31,20 +34,27 @@ export const ItemListContainer = ({ greeting }) => {
 
         getDocs(collectionRef)
             .then((snapshot) => {
-            setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))})
+            setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+            setLoading(false)})
+            //
             .catch((error) => {
                 console.log(error)
             });
     }, [categoryId]);
 
-    if (!products) return <p>Cargando...</p>
+    //if (!products) return <CardSkeleton />
 
     return (
         <>
             <Container>
                 <h2>Productos</h2>
             </Container>
-            <ItemList products={products} />
+            <Container className="skeleton-container">
+                 { loading && <CardSkeleton cards={5}/> }
+            </Container>
+           
+            { !loading && <ItemList products={products} /> }
+            
         </>
     )
 }

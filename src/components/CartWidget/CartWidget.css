@@ -1,0 +1,6 @@
+@media(min-width: 768px) {
+    .cart-container {
+        position: absolute;
+        right: 12px;
+    }
+}
